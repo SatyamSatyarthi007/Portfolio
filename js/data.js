@@ -25,20 +25,20 @@ export const DATA = {
     github: 'https://github.com/SatyamSatyarthi007',
     linkedin: 'https://www.linkedin.com/in/satyam-satyarthi-shukla-093130277/',
     twitter: 'https://x.com/SatyamSaty2108',
-    resume: 'https://drive.google.com/file/d/1B5vEnzPVSxa0PtDG5m_EEgo4Ks6blyDI/view?usp=sharing',
+    resume: 'https://drive.google.com/file/d/1RZXsvuZUehtqVxDU2VH2vosSlFSG-LgU/view?usp=sharing',
   },
 
   skills: {
-    'Cloud Platforms':   ['AWS (EC2, S3, IAM, VPC, CloudWatch, Auto Scaling, ECS, EKS)'],
-    'Containerization':  ['Docker', 'Docker Compose', 'Nginx'],
-    'Orchestration':     ['Kubernetes (kubectl, Pods, Deployments, Services, Manifests)'],
-    'CI/CD & IaC':       ['GitHub Actions', 'Jenkins', 'Terraform'],
-    'Security & Quality':['SonarQube', 'Trivy', 'OWASP Dependency Check', 'Nexus'],
-    'Monitoring':        ['Prometheus', 'Grafana', 'CloudWatch (Alarms, Metrics, SNS)'],
-    'Scripting':         ['Bash', 'Python'],
-    'Version Control':   ['Git', 'GitHub'],
+    'Cloud Platforms': ['AWS (EC2, S3, IAM, VPC, CloudWatch, Auto Scaling, ECS, EKS)'],
+    'Containerization': ['Docker', 'Docker Compose', 'Nginx'],
+    'Orchestration': ['Kubernetes (kubectl, Pods, Deployments, Services, Manifests)'],
+    'CI/CD & IaC': ['GitHub Actions', 'Jenkins', 'Terraform'],
+    'Security & Quality': ['SonarQube', 'Trivy', 'OWASP Dependency Check', 'Nexus'],
+    'Monitoring': ['Prometheus', 'Grafana', 'CloudWatch (Alarms, Metrics, SNS)'],
+    'Scripting': ['Bash', 'Python'],
+    'Version Control': ['Git', 'GitHub'],
     'Operating Systems': ['Linux (Ubuntu)'],
-    'Methodologies':     ['Agile/Scrum'],
+    'Methodologies': ['Agile/Scrum'],
   },
 
   experience: [
@@ -259,12 +259,12 @@ function parseResume(markdown) {
 
 // Section name → { dataKey, emptyValue } mapping for reset/populate
 const SECTION_MAP = {
-  summary:        { set: v => { DATA.personal.summary = v; }, empty: '' },
-  skills:         { set: v => { DATA.skills = v; },           empty: {} },
-  education:      { set: v => { DATA.education = v; },        empty: {} },
-  experience:     { set: v => { DATA.experience = v; },       empty: [] },
-  projects:       { set: v => { DATA.projects = v; },         empty: [] },
-  certifications: { set: v => { DATA.certifications = v; },   empty: [] },
+  summary: { set: v => { DATA.personal.summary = v; }, empty: '' },
+  skills: { set: v => { DATA.skills = v; }, empty: {} },
+  education: { set: v => { DATA.education = v; }, empty: {} },
+  experience: { set: v => { DATA.experience = v; }, empty: [] },
+  projects: { set: v => { DATA.projects = v; }, empty: [] },
+  certifications: { set: v => { DATA.certifications = v; }, empty: [] },
 };
 
 export async function loadResumeData() {

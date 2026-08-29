@@ -14,21 +14,21 @@ let skipBoot = false;
 
 // --- Boot sequence messages ---
 const bootLines = [
-  { text: '$ sudo boot-portfolio.sh', cls: 'boot-cmd', delay: 400 },
-  { text: '', delay: 300 },
-  { text: '[ OK ] Initializing Portfolio Kernel v3.0...', cls: 'boot-ok', delay: 500 },
-  { text: '[ OK ] Loading Skills Database...', cls: 'boot-ok', delay: 400 },
-  { text: '[ OK ] Mounting Cloud Services (AWS, Docker, K8s)...', cls: 'boot-ok', delay: 450 },
-  { text: '[ OK ] Fetching DevOps Projects...', cls: 'boot-ok', delay: 350 },
-  { text: '[ OK ] Initializing CI/CD Pipelines...', cls: 'boot-ok', delay: 400 },
-  { text: '[ OK ] Loading Certifications...', cls: 'boot-ok', delay: 300 },
-  { text: '[ OK ] Starting Monitoring Services (Prometheus, Grafana)...', cls: 'boot-ok', delay: 450 },
-  { text: '[ OK ] Security Scan Complete — All Clear.', cls: 'boot-ok', delay: 350 },
-  { text: '[ OK ] Starting Portfolio Services...', cls: 'boot-ok', delay: 400 },
-  { text: '', delay: 200 },
-  { text: '[ OK ] Recruiter Access Granted.', cls: 'boot-yellow', delay: 500 },
-  { text: '', delay: 300 },
-  { text: 'Welcome to Satyam\'s Portfolio Terminal!', cls: 'boot-white', delay: 600 },
+  { text: '$ sudo boot-portfolio.sh', cls: 'boot-cmd', delay: 140 },
+  { text: '', delay: 105 },
+  { text: '[ OK ] Initializing Portfolio Kernel v3.0...', cls: 'boot-ok', delay: 175 },
+  { text: '[ OK ] Loading Skills Database...', cls: 'boot-ok', delay: 140 },
+  { text: '[ OK ] Mounting Cloud Services (AWS, Docker, K8s)...', cls: 'boot-ok', delay: 155 },
+  { text: '[ OK ] Fetching DevOps Projects...', cls: 'boot-ok', delay: 120 },
+  { text: '[ OK ] Initializing CI/CD Pipelines...', cls: 'boot-ok', delay: 140 },
+  { text: '[ OK ] Loading Certifications...', cls: 'boot-ok', delay: 105 },
+  { text: '[ OK ] Starting Monitoring Services (Prometheus, Grafana)...', cls: 'boot-ok', delay: 155 },
+  { text: '[ OK ] Security Scan Complete — All Clear.', cls: 'boot-ok', delay: 120 },
+  { text: '[ OK ] Starting Portfolio Services...', cls: 'boot-ok', delay: 140 },
+  { text: '', delay: 70 },
+  { text: '[ OK ] Recruiter Access Granted.', cls: 'boot-yellow', delay: 175 },
+  { text: '', delay: 105 },
+  { text: 'Welcome to Satyam\'s Portfolio Terminal!', cls: 'boot-white', delay: 210 },
   { text: 'Type \'help\' to begin exploring.', cls: 'boot-cmd', delay: 0 },
 ];
 
@@ -48,7 +48,7 @@ async function runBoot() {
     for (const char of line.text) {
       if (skipBoot) { span.textContent = line.text; break; }
       span.textContent += char;
-      await sleep(15);
+      await sleep(3);
     }
 
     if (!skipBoot && line.delay > 0) {
@@ -57,9 +57,9 @@ async function runBoot() {
   }
 
   // Transition to terminal
-  await sleep(skipBoot ? 0 : 600);
+  await sleep(skipBoot ? 0 : 300);
   bootScreen.classList.add('fade-out');
-  await sleep(600);
+  await sleep(300);
   bootScreen.classList.add('hidden');
   termContainer.classList.remove('hidden');
   // Trigger reflow, then add visible class
