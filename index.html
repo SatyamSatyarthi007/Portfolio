@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satyam Satyarthi — Cloud & DevOps Engineer</title>
+  <meta name="description" content="Interactive Linux terminal portfolio of Satyam Satyarthi — Cloud & DevOps Engineer. Explore skills, projects, and experience through a real shell interface.">
+  <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Docker, Kubernetes, Terraform, Portfolio">
+  <meta name="author" content="Satyam Satyarthi">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Satyam Satyarthi — Cloud & DevOps Engineer">
+  <meta property="og:description" content="Interactive Linux terminal portfolio. Type 'help' to explore.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Particle background -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Boot screen -->
+  <div id="boot-screen" class="boot-screen">
+    <div id="boot-output" class="boot-output"></div>
+    <button id="skip-boot" class="skip-boot" aria-label="Skip boot animation">Skip ▶ (ESC)</button>
+  </div>
+
+  <!-- Terminal -->
+  <main id="terminal-container" class="terminal-container hidden" role="main">
+    <!-- Title bar -->
+    <div class="title-bar" aria-hidden="true">
+      <div class="window-controls">
+        <span class="control close" title="Close"></span>
+        <span class="control minimize" title="Minimize"></span>
+        <span class="control maximize" title="Maximize"></span>
+      </div>
+      <span class="title-text">satyam@portfolio: ~</span>
+      <div class="title-spacer"></div>
+    </div>
+
+    <!-- Terminal body -->
+    <div id="terminal" class="terminal" role="log" aria-live="polite" aria-label="Terminal output">
+      <div id="output" class="output"></div>
+
+      <!-- Input line -->
+      <div class="input-line" role="textbox" aria-label="Command input">
+        <span class="prompt">
+          <span class="prompt-user">satyam</span><span class="prompt-at">@</span><span class="prompt-host">portfolio</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span>
+        </span>
+        <div class="input-wrapper">
+          <input
+            id="command-input"
+            type="text"
+            class="command-input"
+            autocomplete="off"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            aria-label="Type a command"
+          >
+          <span class="cursor" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggested commands (mobile-friendly) -->
+    <div class="suggested-commands" aria-label="Suggested commands">
+      <button class="cmd-btn" data-cmd="help">help</button>
+      <button class="cmd-btn" data-cmd="about">about</button>
+      <button class="cmd-btn" data-cmd="skills">skills</button>
+      <button class="cmd-btn" data-cmd="projects">projects</button>
+      <button class="cmd-btn" data-cmd="experience">experience</button>
+      <button class="cmd-btn" data-cmd="contact">contact</button>
+      <button class="cmd-btn" data-cmd="resume">resume</button>
+      <button class="cmd-btn" data-cmd="theme">theme</button>
+      <button class="cmd-btn" data-cmd="clear">clear</button>
+    </div>
+  </main>
+
+  <!-- Matrix canvas (hidden until activated) -->
+  <canvas id="matrix-canvas" class="matrix-canvas hidden" aria-hidden="true"></canvas>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
