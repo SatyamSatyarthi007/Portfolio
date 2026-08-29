@@ -25,7 +25,7 @@ export const DATA = {
     github: 'https://github.com/SatyamSatyarthi007',
     linkedin: 'https://www.linkedin.com/in/satyam-satyarthi-shukla-093130277/',
     twitter: 'https://x.com/SatyamSaty2108',
-    resume: 'https://drive.google.com/file/d/1B5vEnzPVSxa0PtDG5m_EEgo4Ks6blyDI/view?usp=sharing',
+    resume: 'https://drive.google.com/file/d/1RZXsvuZUehtqVxDU2VH2vosSlFSG-LgU/view?usp=sharing',
   },
 
   skills: {
